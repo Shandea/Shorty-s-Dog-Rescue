@@ -39,7 +39,6 @@ nav a {
   font-weight: bold;
 }
 
-
 nav a:hover,
 nav a.active {
   color: var(--secondaryColor);
