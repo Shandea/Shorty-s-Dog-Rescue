@@ -1,5 +1,3 @@
-/* @import "../styles/global.css"; */
-
 header {
   display: flex;
   align-items: center;
@@ -7,8 +5,8 @@ header {
   padding: 0 1.5rem;
   background-color: var(--mainColor);
   color: var(--textColor);
-  height: 9rem;
-  width: 100vw;
+  height: 8.5rem;
+  width: 100%;
 }
 
 .header-container {
@@ -68,7 +66,7 @@ header .nav-btn:hover {
 
 @media only screen and (max-width: 625px) {
   header {
-    height: 35%;
+    height: 25%;
   }
 
   header .nav-btn {
@@ -81,13 +79,13 @@ header .nav-btn:hover {
     position: fixed;
     top: 0;
     left: 0;
-    height: 30%;
+    height: 25%;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: .75rem;
     background-color: var(--mainColor);
     /* transition: .01s; */
     transform: translate(-100vh);
@@ -95,6 +93,11 @@ header .nav-btn:hover {
 
   header .responsive_nav {
     transform: none;
+  }
+
+  .responsive_nav {
+    margin-bottom: 5rem
+
   }
 
   nav .nav-close-btn {
