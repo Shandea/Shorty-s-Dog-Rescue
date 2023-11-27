@@ -1,7 +1,7 @@
 /* Mobile-first styles */
-.adoption-form {
+.donation-form {
   margin-bottom: 1rem;
-  max-width: 85%;
+  width: 85%;
   padding: .55rem;
   box-shadow: .25rem .25rem .4rem rgba(0, 0, 0, 0.7);
   display: flex;
@@ -44,27 +44,28 @@ button {
 .thank-you-message {
   font-size: 1.5rem;
   color: var(--textColor);
-  margin-left: 3rem;
+  margin-right: 3rem;
 }
 
 .submit-div {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
 
 /* Responsive styles */
 @media only screen and (min-width: 600px) and (max-width: 950px) {
-  .adoption-form {
+  .donation-form {
     margin-top: 1rem;
-    max-width: 60%;
+    max-width: 45%;
   }
 }
 
 @media only screen and (min-width: 951px) {
-  .adoption-form {
+  .donation-form {
     margin-top: 1rem;
-    max-width: 40%;
+    max-width: 32%;
   }
 
   .form-group {
