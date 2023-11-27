@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import "../styles/global.css";
 import "./NavBar.css";
 import { FaBars, FaTimes } from "react-icons/fa";
+import Logo from '../assets/dark_resized2.png'
 
 const NavBar = () => {
   const navRef = useRef();
@@ -14,7 +15,7 @@ const NavBar = () => {
   return (
     <header>
       <div className='header-container'>
-        <img src='/assets/dark_resized2.png' alt='Logo' />
+        <img src={Logo} alt='Logo' />
         <nav ref={navRef}>
           <Link to='/'>HOME</Link>
           <Link to='/about'>ABOUT</Link>
