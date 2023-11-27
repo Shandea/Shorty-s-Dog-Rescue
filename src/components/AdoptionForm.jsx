@@ -51,48 +51,96 @@ const AdoptionForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="adoption-form">
+    <form method='post' onSubmit={handleSubmit} className="adoption-form">
       <h2>Adoption Interest Application</h2>
       <div className="form-group">
-        <label>
+        <label htmlFor='nameOfDog'>
           Dog Interested In:
-          <input type="text" name="nameOfDog" value={formData.nameOfDog} onChange={handleInputChange} placeholder="Animal's name" required />
+          <input 
+          type="text" 
+          name="nameOfDog" 
+          id="nameOfDog" 
+          value={formData.nameOfDog} 
+          onChange={handleInputChange} 
+          placeholder="Animal's name" 
+          required />
         </label>
       </div>
       <div className="form-group">
-        <label>
+        <label htmlFor='firstName'>
           First Name:
-          <input type="text" name="firstName" value={formData.firstName} onChange={handleInputChange} placeholder="Your first name" required />
+          <input 
+          type="text" 
+          name="firstName" 
+          id="firstName" 
+          value={formData.firstName} 
+          onChange={handleInputChange} 
+          placeholder="Your first name" 
+          required />
         </label>
       </div>
       <div className="form-group">
-        <label>
+        <label htmlFor='lastName'>
           Last Name:
-          <input type="text" name="lastName" value={formData.lastName} onChange={handleInputChange} placeholder="Your last name" required />
+          <input 
+          type="text" 
+          name="lastName" 
+          id="lastName" 
+          value={formData.lastName} 
+          onChange={handleInputChange} 
+          placeholder="Your last name" 
+          required />
         </label>
       </div>
       <div className="form-group">
-        <label>
+        <label htmlFor='phone'>
           Phone:
-          <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} placeholder="Your phone number" required />
+          <input 
+          type="tel" 
+          name="phone" 
+          id="phone" 
+          value={formData.phone} 
+          onChange={handleInputChange} 
+          placeholder="Your phone number" 
+          required />
         </label>
       </div>
       <div className="form-group">
-        <label>
+        <label htmlFor='email'>
           Email:
-          <input type="email" name="email" value={formData.email} onChange={handleInputChange} placeholder="Your email address" required />
+          <input 
+          type="email" 
+          name="email" 
+          id="email" 
+          value={formData.email} 
+          onChange={handleInputChange} 
+          placeholder="Your email address" 
+          required />
         </label>
       </div>
       <div className="form-group">
-        <label>
+        <label htmlFor='signature'>
           Your Signature: ( Agreement For Spay / Neuter )
-          <input type="text" name="signature" value={formData.signature} onChange={handleInputChange} placeholder="Your full name" required />
+          <input 
+          type="text" 
+          name="signature" 
+          id="signature" 
+          value={formData.signature} 
+          onChange={handleInputChange} 
+          placeholder="Your full name" 
+          required />
         </label>
       </div>
       <div className="form-group">
-        <label>
+        <label htmlFor='date'>
           Date:
-          <input type="date" name="date" value={formData.date} onChange={handleInputChange} required />
+          <input 
+          type="date" 
+          name="date" 
+          id="date" 
+          value={formData.date} 
+          onChange={handleInputChange} 
+          required />
         </label>
       </div>
       <div className="form-group submit-div">
