@@ -65,8 +65,10 @@ header .nav-btn:hover {
 }
 
 @media only screen and (max-width: 625px) {
+
   header {
-    height: 25%;
+    padding: 0;
+    height: 9rem;
   }
 
   header .nav-btn {
@@ -85,25 +87,25 @@ header .nav-btn:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: .75rem;
+    gap: .25rem;
     background-color: var(--mainColor);
     /* transition: .01s; */
     transform: translate(-100vh);
   }
 
-  header .responsive_nav {
+  .responsive_nav {
+    /* margin-bottom: 5rem; */
+    height: 9rem;
     transform: none;
   }
 
-  .responsive_nav {
-    margin-bottom: 5rem
-
+  .nav-close-btn {
+    position: absolute;
+    right: .5rem;
   }
 
-  nav .nav-close-btn {
-    position: absolute;
-    top: 4rem;
-    right: .75rem;
+  .nav-btn-open {
+    margin-right: .5rem;
   }
 
   nav a {
