@@ -30,7 +30,7 @@ select {
   box-sizing: border-box;
 }
 
-button {
+.submit-div button {
   background-color: #4caf50;
   color: var(--secondaryColor);
   padding: .50rem;
