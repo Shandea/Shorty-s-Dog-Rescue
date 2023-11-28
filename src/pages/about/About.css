@@ -14,7 +14,6 @@
 
 .title_about {
   text-align: center;
-  font-size: 7vh;
   margin-top: 2%;
   margin-bottom: 5%;
 }
@@ -69,7 +68,7 @@
   
   .title_about {
     text-align: center;
-    font-size: 7vh;
+    font-size: 4.5vh;
     margin-top: 1%;
     margin-bottom: 1%;
   }
