@@ -2,10 +2,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    /* grid-template-columns: 1fr 1fr; */
     gap: 8rem 10rem;
     max-width: 80%;
     margin: auto;
+    
 
 }
 

@@ -5,6 +5,15 @@
   justify-content: center;
 }
 
+.title-adopt {
+  margin-top: 2%;
+  margin-bottom: 5%;
+ 
+}
+
+
+
+
 .adopt-image {
   width: 100%;
   height: auto;
@@ -18,6 +27,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 }
 
 .adopt-content-div p {
@@ -26,7 +36,7 @@
 }
 
 @media only screen and (min-width: 751px) and (max-width: 950px) {
-  .adopt-content-div  {
+  .adopt-content-div {
     max-width: 50%;
   }
 

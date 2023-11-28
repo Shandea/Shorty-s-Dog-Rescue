@@ -2,12 +2,13 @@
 .adoption-form {
   margin-bottom: 1rem;
   max-width: 85%;
-  padding: .55rem;
+  padding: 5rem;
   box-shadow: .25rem .25rem .4rem rgba(0, 0, 0, 0.7);
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 3px;
+  border-radius: 10px;
+  width: 100%;
 }
 
 .form-group {
