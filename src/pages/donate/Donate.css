@@ -5,6 +5,10 @@
   justify-content: center;
 }
 
+.title-donate{
+  margin-top: 2%;
+  margin-bottom: 5%;
+}
 .donate-content-div {
   width: 100%;
   height: auto;
