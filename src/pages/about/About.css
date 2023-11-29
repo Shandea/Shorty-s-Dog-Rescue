@@ -5,6 +5,11 @@
   justify-content: center;
 }
 
+.title-about {
+  margin-top: 2%;
+  margin-bottom: 5%;
+}
+
 .about-image {
   width: 100%;
   height: auto;
@@ -12,62 +17,64 @@
   box-shadow: .25rem .25rem .4rem rgba(0, 0, 0, 0.7);
 }
 
-.about-text {
+.about-content-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-text p {
+  margin-top: 2rem;
   padding: 1.5rem;
   text-align: justify;
 }
 
-@media only screen and (min-width: 751px) and (max-width: 950px)  {
-  .about-container {
-    margin-top: 5%;
-    flex-direction: row;
-    justify-content: space-evenly;
+@media only screen and (min-width: 751px) and (max-width: 1000px) {
+  .about-content-div {
+    max-width: 50%;
   }
 
   .about-image {
-    border-radius: 3px;
-    max-width: 50%;
-    height: 100%;
-    order: 1;
+    margin-top: 1.5rem;
   }
 
   .about-text {
-    padding: 1rem;
-    font-size: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 40%;
-    order: 2;
-    text-align: left;
+    max-width: 50%;
     text-align: justify;
   }
 }
 
-@media only screen and (min-width: 951px) {
+@media only screen and (min-width: 1001px) {
   .about-container {
-    width: 100%;
-    height: 100%;
-    margin-top: 5.5%;
+    padding-top: 2rem;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
+  }
+
+  .about-content-div {
+    padding: 1rem;
+    font-size: 1.33rem;
+    margin-top: 1rem;
+    max-width: 48%;
+    text-align: justify;
+    margin-bottom: 1.5rem
   }
 
   .about-image {
-    border-radius: 3px;
-    width: 40%;
-    height: auto;
-    order: 1;
+    max-width: 75%;
+    height: 28rem;
+    margin-bottom: 1rem;
   }
 
   .about-text {
-    font-size: 1.33rem;
-    max-width: 50%;
-    height: auto;
-    order: 2;
-    padding: 0;
+    font-size: 1.35rem;
+    margin-top: 1rem;
+    max-width: 30%;
+    height: 30rem;
+    margin-right: 8rem;
     text-align: justify;
   }
 }
