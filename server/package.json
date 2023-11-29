@@ -4,33 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --timeout 10000 --ui tdd",
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js nodemon"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "connect-mongo": "^5.0.0",
+    "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "express-session": "^1.17.3",
-    "helmet": "^7.0.0",
-    "mongoose": "^7.5.0",
-    "multer": "^1.4.5-lts.1",
-    "passport": "^0.6.0",
-    "passport-local": "^1.0.0",
-    "passport.socketio": "^3.7.0",
-    "pug": "^3.0.2",
-    "socket.io": "^4.7.2"
+    "mongoose": "^8.0.2"
   },
   "devDependencies": {
-    "chai": "^4.3.8",
-    "chai-http": "^4.4.0",
-    "dotenv": "^16.3.1",
-    "mocha": "^10.2.0",
-    "nodemon": "^3.0.1"
+    "install": "^0.13.0",
+    "nodemon": "^3.0.1",
+    "npm": "^10.2.4"
   }
 }
