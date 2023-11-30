@@ -18,20 +18,20 @@ const AdoptSchema = new mongoose.Schema({
         type: Number
     },
     email: {
-        type: String
+        type: String,
     },
 
-    signature:{
+    signature: {
         type: String,
         required: true
     },
-  date:{
-    type: String,
-    required:true
-}
+    date: {
+        type: String,
+        required: true
+    }
 });
 
-module.exports = Adopt = mongoose.model('Adopt', AdoptSchema);
+module.exports = mongoose.model('Adopt', AdoptSchema);
 
 
 

@@ -1,8 +1,13 @@
 const router = require("express").Router();
-const FormDataController = require("../controllers/FormDataController");
+const { formDataController }= require("../controllers");
 
-// Define API endpoints for fetching data change to actual model names
-router.get('/forms/form1Data', FormDataController.getForm1Data);
-router.get('/forms/form2Data', FormDataController.getForm2Data);
+// Define API endpoints for fetching data 
+router.get('/forms/adoption', formDataController.getAdoptData);
+router.get('/forms/donation', formDataController.getDonateData);
+
+
+// Define API endpoint for submitting data
+router.post('/forms/adoption', formDataController.submitAdoptData);
+router.post('/forms/donation', formDataController.submitDonateData);
 
 module.exports = router;
