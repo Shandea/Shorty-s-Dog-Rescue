@@ -26,9 +26,10 @@
   display: none;
 }
 
-@media only screen and (min-width: 751px) and (max-width: 950px) {
+@media only screen and 
+ (max-width: 950px) {
   .donate-content-div  {
-    max-width: 70%;
+    max-width: 50%;
     font-size: 1.15rem;
   }
 
@@ -46,7 +47,7 @@
 
   .donate-content-div {
     padding: 1rem;
-    font-size: 1.33rem;
+    font-size: 1.35rem;
     margin-top: 1rem;
     max-width: 48%;
     text-align: justify;
@@ -54,7 +55,7 @@
   }
 
   .donate-content-div p {
-    max-width: 100%;
+    max-width: 80%;
   }
 
   .donate-address-div {
