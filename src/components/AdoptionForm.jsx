@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from "axios";
 import "./AdoptionForm.css";
 
 const AdoptionForm = () => {
@@ -17,12 +18,9 @@ const AdoptionForm = () => {
 
   useEffect(() => {
     if (submitted) {
-      // Delay the rendering of the "Thank You!" message for a short duration
       const delay = setTimeout(() => {
         setSubmitted(false);
-      }, 50000); // Adjust the duration as needed
-      
-      // Clear the timeout if the component unmounts before the delay
+      }, 50000); // Adjust the duration as needed for "Thank You" msg.
       return () => clearTimeout(delay);
     }
   }, [submitted]);
@@ -41,13 +39,22 @@ const AdoptionForm = () => {
     setSubmitted(true);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Add your logic for handling form submission here
-    console.log('Form submitted:', formData);
+    
+    try {
+      const apiUrl = process.env.REACT_APP_BACKEND_URL || "http://localhost:4000";
+      const response = await axios.post(apiUrl + "/forms/adoption", {
+        formData,
+      });
+      
+      console.log('Form submitted:', formData);
+      console.log('Server Response:', response.data);
+      resetForm();
 
-    // Set the submitted state to true
-    resetForm();
+    } catch (error) {
+      console.error("Error submitting form data:", error)
+    }
   };
 
   return (

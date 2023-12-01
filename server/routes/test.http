@@ -1,0 +1,33 @@
+
+
+### Submit Adoption Form Data
+POST http://localhost:4000/forms/adoption
+Content-Type: application/json
+
+{
+  "formData": {
+    "nameOfDog": "Buddy",
+    "firstName": "John",
+    "lastName": "Doe",
+    "phone": "123-456-7890",
+    "email": "john.doe@example.com",
+    "signature": "John Doe",
+    "date": "2023-12-01"
+  }
+}
+
+### Submit Donation Form Data
+POST http://localhost:4000/forms/donation
+Content-Type: application/json
+
+{
+  "formData": {
+    "fullName": "Jane Doe",
+    "email": "jane.doe@example.com",
+    "amount": 50,
+    "creditCardNumber": "1234567812345678",
+    "expirationDate": "12/2023",
+    "securityCode": "123",
+    "zipCode": "12345"
+  }
+}

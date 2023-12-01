@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-// require('dotenv').config()
 
 const AdoptSchema = new mongoose.Schema({
     dogName: {
@@ -15,23 +14,23 @@ const AdoptSchema = new mongoose.Schema({
         required: true
     },
     phoneNumber: {
-        type: Number
-    },
-    email: {
-        type: String
-    },
-
-    signature:{
         type: String,
         required: true
     },
-  date:{
-    type: String,
-    required:true
-}
+    email: {
+        type: String,
+        required: true
+    },
+    signature: {
+        type: String,
+        required: true
+    },
+    date: {
+        type: Date,
+        required: true
+    }
+},{
+    timestamps: true
 });
 
-module.exports = Adopt = mongoose.model('Adopt', AdoptSchema);
-
-
-
+module.exports = mongoose.model('Adopt', AdoptSchema);
