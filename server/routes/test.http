@@ -9,7 +9,7 @@ Content-Type: application/json
     "nameOfDog": "Buddy",
     "firstName": "John",
     "lastName": "Doe",
-    "phone": "1234567890",
+    "phone": "123-456-7890",
     "email": "john.doe@example.com",
     "signature": "John Doe",
     "date": "2023-12-01"

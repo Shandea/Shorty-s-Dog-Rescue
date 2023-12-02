@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-// require('dotenv').config()
 
 const DonateSchema = new mongoose.Schema({
     fullName: {
@@ -8,6 +7,7 @@ const DonateSchema = new mongoose.Schema({
     },
     email: {
         type: String,
+        default: "",
     },
     amountToDonate: {
         type: Number,
@@ -29,12 +29,8 @@ const DonateSchema = new mongoose.Schema({
         required: true
     },
 
+},{
+    timestamps: true
 });
 
 module.exports = mongoose.model('Donate', DonateSchema);
-
-
-
-
-
-
