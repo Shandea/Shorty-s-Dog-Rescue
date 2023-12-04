@@ -3,20 +3,17 @@ const app = express();
 const cors = require("cors");
 const router = require("./routes/router");
 const connectDB = require('./db/index.js'); // Import the database connection function
-require('dotenv/config');
+
+const config = require('./utils/config.js')
 
 
 // Define routes and middleware here
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
-const corsOptions = {
-  origin: "*",
-  credentials: true,
-  optionSuccessStatus: 200,
-}
 
-app.use(cors(corsOptions));
+
+app.use(cors(config.cors));
 app.use("/", router);
 
 connectDB();
