@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import './card.css'
 import flower from '../../assets/flower.jpg'
 import blue_eyes from '../../assets/blue_eyes.jpg'
@@ -14,6 +15,11 @@ const Card = () => {
         height: '350px',  // Set the height to 350 pixels
     };
 
+    const navigate = useNavigate();
+    const handleButtonClick = () => {
+        navigate("/adopt");
+    }
+
 
     return (
         <div className='flip-card-container'>
@@ -22,11 +28,7 @@ const Card = () => {
                 <div className="flip-card-inner">
                     <div className="flip-card-front">
                         <img src={flower} alt="Avatar" style={imageStyle} />
-
                     </div>
-
-
-
                     <div className="flip-card-back">
                         <h1>Flower</h1>
                         <p>Golden Retriever</p>
@@ -39,12 +41,11 @@ const Card = () => {
                         </small>
                         <br />
                         <div className='btn-container'>
-                            <button className='pickMe-buttons'>Pick Me</button>
+                            <button className='pickMe-buttons' onClick={handleButtonClick}>Pick Me</button>
                         </div>
                     </div>
                 </div>
             </div>
-
 
             <div className="flip-card">
                 <div className="flip-card-inner">
@@ -63,10 +64,9 @@ const Card = () => {
                             I could be your new Best fiend </small>
                         <br />
                         <div className='btn-container'>
-                            <button className='pickMe-buttons'>Pick Me</button>
+                            <button className='pickMe-buttons' onClick={handleButtonClick}>Pick Me</button>
                         </div>
                     </div>
-
                 </div>
             </div>
 
@@ -83,16 +83,15 @@ const Card = () => {
                         <small>Howdy, I'm Cocoa! I may be an older Lab Mix but I still love going for walks and exploring all nature has to offer. 
                             I like going for trips in the car so if you're in search of an adventure buddy, I'm your pup! If you have any other four-legged friends,
                              I would like to meet them to make sure that our energies mesh.
-                           
                         </small>
                         <br />
                         <div className='btn-container'>
-                            <button className='pickMe-buttons'>Pick Me</button>
+                            <button className='pickMe-buttons' onClick={handleButtonClick}>Pick Me</button>
                         </div>
                     </div>
-
                 </div>
             </div>
+
             <div className="flip-card">
                 <div className="flip-card-inner">
                     <div className="flip-card-front">
@@ -109,11 +108,12 @@ const Card = () => {
                             I enjoy spending time with people and learning new things.</small>
                         <br />
                         <div className='btn-container'>
-                            <button className='pickMe-buttons'>Pick Me</button>
+                            <button className='pickMe-buttons' onClick={handleButtonClick}>Pick Me</button>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div className="flip-card">
                 <div className="flip-card-inner">
                     <div className="flip-card-front">
@@ -130,7 +130,7 @@ const Card = () => {
                             I enjoy spending time with people and learning new things.</small>
                         <br />
                         <div className='btn-container'>
-                            <button className='pickMe-buttons'>Pick Me</button>
+                            <button className='pickMe-buttons' onClick={handleButtonClick}>Pick Me</button>
                         </div>
                     </div>
                 </div>
@@ -152,18 +152,12 @@ const Card = () => {
                             I enjoy spending time with people and learning new things.</small>
                         <br />
                         <div className='btn-container'>
-                            <button className='pickMe-buttons'>Pick Me</button>
+                            <button className='pickMe-buttons' onClick={handleButtonClick}>Pick Me</button>
                         </div>
                     </div>
                 </div>
             </div>
-
-
-
-
-
         </div>
     )
 }
 export default Card
-
