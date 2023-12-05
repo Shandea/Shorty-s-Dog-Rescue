@@ -5,15 +5,14 @@ import "./NavBar.css";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from '../assets/dark_resized2.png'
 
-const NavBar = () => {
+const NavBar = ({ isAdmin }) => {
   const navRef = useRef();
   const location = useLocation();
-
+  
   const showNavbar = () => {
     navRef.current.classList.toggle("responsive_nav");
   }
 
-  // Function to determine if a link is active
   const isLinkActive = (to) => {
     return location.pathname === to;
   }
@@ -30,6 +29,11 @@ const NavBar = () => {
           <button className='nav-btn nav-close-btn' onClick={showNavbar}><p className='menu-text'>Close</p>
             <FaTimes />
           </button>
+        
+          { isAdmin && (
+            <Link to='/admin' className={isLinkActive('/admin') ? 'active' : ''}>ADMIN</Link>
+          )}
+
         </nav>
       </div>
       <button className='nav-btn nav-btn-open' onClick={showNavbar}><p className='menu-text'>Menu</p>
