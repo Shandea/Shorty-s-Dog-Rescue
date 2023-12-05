@@ -6,6 +6,7 @@ import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import Adopt from "./pages/adopt/Adopt";
 import Donate from "./pages/donate/Donate";
+import Admin from "./pages/admin/Admin"
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/admin" element={<Admin />} />
         <Route path="/about" element={<About />} />
         <Route path="/adopt" element={<Adopt />} />
         <Route path="/donate" element={<Donate />} />
