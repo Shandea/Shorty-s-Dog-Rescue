@@ -1,8 +1,80 @@
 .adminWholePage{
    
     height: 85.6vh;
+    width:100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+   
+    
 }
+
+.adoptSection{
+    width:100%;
+    height:45%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.adoptRow{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    /* gap:5%; */
+   
+    width:100%;
+}
+
+.adoptCard{
+    display:flex;
+    flex-direction: column;
+    /* align-items: center; */
+    box-shadow: .25rem .25rem .4rem rgba(0, 0, 0, 0.7);
+    border: 1px solid black;
+    border-radius: 3px;
+    width:20vmin;
+    font-size: 2vmin;
+   word-wrap: break-word;
+    /* justify-content: center; */
+   
+}
+
+
+
+
+
+.donationSection{
+    width:100%;
+    height:45%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.donationRow{
+    display:flex;
+    width:100%;
+    align-items: center;
+    justify-content: space-around;
+    /* gap:5%; */
+}
+
+.donationCard{
+    display:flex;
+    flex-direction: column;
+    /* align-items: center; */
+    border-radius: 3px;
+    box-shadow: .25rem .25rem .4rem rgba(0, 0, 0, 0.7);
+    border: 1px solid black;
+    width:20vmin;
+    font-size: 2vmin;
+    word-wrap: break-word;
+    /* justify-content: center; */
+   
+}
+
