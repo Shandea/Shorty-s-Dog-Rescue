@@ -23,22 +23,43 @@ const Admin = () => {
     <div className="adminWholePage">
       <h1>Welcome Admin!</h1>
 
-      <div>
+      <div className='adoptSection'>
         <h2>Adoption Data:</h2>
-        <ul>
+        <div className='adoptRow'>
           {adoptData.map((data, index) => (
-            <li key={index}>{/* Render adoption data here */}</li>
+            <div className='adoptCard' key={index}>
+                <p>Dog Name: {data.dogName}</p>
+                <p>First Name:{data.firstName}</p>
+                <p>Last Name:{data.lastName}</p>
+                <p>Phone Number:{data.phoneNumber}</p>
+                <p>Email:{data.email}</p>
+                <p>Date:{data.date}</p>
+
+                
+                
+
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
 
-      <div>
+      <div className='donationSection'>
         <h2>Donation Data:</h2>
-        <ul>
+        <div className='donationRow'>
           {donateData.map((data, index) => (
-            <li key={index}>{/* Render donation data here */}</li>
+            <div className='donationCard' key={index}>
+                
+                <p>Full Name:{data.fullName}</p>
+                <p>Email:{data.email}</p>
+                <p>Credit Card Number:{data.creditCardNumber}</p>
+                <p>Expiration Date:{data.expirationDate}</p>
+                <p>Security Code:{data.securityCode}</p>
+                <p>Zip Code:{data.zipCode}</p>
+
+                
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     </div>
   );
