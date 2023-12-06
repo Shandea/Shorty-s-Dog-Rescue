@@ -40,7 +40,7 @@ const NavBar = ({ isAdmin,showLogIn,showLogOut,setShowLogIn,setLogOut }) => {
 
 
 
-          {isAdmin && (
+          {!isAdmin && (
             <Link to='/admin' className={isLinkActive('/admin') ? 'active' : ''}>ADMIN</Link>
 
           )}
