@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './styles/App.css';
 import NavBar from "./components/NavBar";
@@ -10,9 +10,14 @@ import Admin from "./pages/admin/Admin"
 
 
 function App() {
+  const [showLogIn, setShowLogIn] = useState(true)
+  const [showLogOut,setLogOut]= useState (false)
   return (
     <div className="App">
-      <NavBar />
+      <NavBar
+      showLogIn={showLogIn}setShowLogIn={setShowLogIn}
+      showLogOut={showLogOut}setLogOut={setLogOut}
+      />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/admin" element={<Admin />} />

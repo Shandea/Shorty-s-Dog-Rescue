@@ -63,6 +63,20 @@ header .nav-btn:hover {
 .menu-text {
   font-size: 1.15rem;
 }
+.signin-btn{
+ border:none;
+ padding: 0;
+ background: none;
+ cursor: pointer;
+ color: var(--textColor);
+ 
+ font-size: 1.15rem;
+ font-weight: bold;
+
+}
+.signin-btn:hover{
+  color: var(--secondaryColor);
+}
 
 @media only screen and (max-width: 625px) {
 
