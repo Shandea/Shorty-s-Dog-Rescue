@@ -6,18 +6,28 @@ import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import Adopt from "./pages/adopt/Adopt";
 import Donate from "./pages/donate/Donate";
-import Admin from "./pages/admin/Admin"
+import Admin from './pages/admin/Admin';
 
 
 function App() {
+
   const [showLogIn, setShowLogIn] = useState(true)
-  const [showLogOut,setLogOut]= useState (false)
+  const [showLogOut, setLogOut] = useState (false)
+  const [isAdmin, setIsAdmin] = useState(false)
+
+
   return (
     <div className="App">
+
       <NavBar
-      showLogIn={showLogIn}setShowLogIn={setShowLogIn}
-      showLogOut={showLogOut}setLogOut={setLogOut}
-      />
+          showLogIn={showLogIn}
+          setShowLogIn={setShowLogIn}
+          showLogOut={showLogOut}
+          setLogOut={setLogOut}
+          isAdmin={isAdmin}
+          setIsAdmin={setIsAdmin}
+       />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/admin" element={<Admin />} />
@@ -25,6 +35,7 @@ function App() {
         <Route path="/adopt" element={<Adopt />} />
         <Route path="/donate" element={<Donate />} />
       </Routes>
+
     </div>
   );
 }
