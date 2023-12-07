@@ -1,80 +1,127 @@
+
+
+/* adminWholePage holds all the content on the page */
+
 .adminWholePage{
    
-    height: 85.6vh;
-    width:100vw;
+    width:70%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap:30px;
+    margin:auto
    
     
 }
 
+.welcomeTitle{
+    color: #212c5f;
+}
+
+/* adoptSection holds "adoption data " title and adoption cards */
+
 .adoptSection{
     width:100%;
-    height:45%;
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap:20px;
+
   
 }
 
 .adoptRow{
+
     display:flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: space-around;
-    /* gap:5%; */
-   
+    align-content: center;
+    gap:20px;
     width:100%;
 }
 
 .adoptCard{
+    width:350px;
+    height:350px;  
     display:flex;
     flex-direction: column;
-    /* align-items: center; */
+    align-items: center;
+    justify-content: space-around;
+    background-color: #d66f54;
+    color: #212c5f;
+    font-weight: 700;
     box-shadow: .25rem .25rem .4rem rgba(0, 0, 0, 0.7);
     border: 1px solid black;
     border-radius: 3px;
-    width:20vmin;
-    font-size: 2vmin;
    word-wrap: break-word;
-    /* justify-content: center; */
+   flex-basis: calc(33.333%-20px);
+   
+ 
    
 }
 
 
 
-
+/* donationSection holds "donation data " title and donation cards */
 
 .donationSection{
     width:100%;
-    height:45%;
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap:20px;
+    margin-bottom: 5%;
 }
 
 .donationRow{
     display:flex;
-    width:100%;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: space-around;
-    /* gap:5%; */
+    align-content: center;
+    gap:20px;
+    width:100%;
 }
 
 .donationCard{
     display:flex;
     flex-direction: column;
-    /* align-items: center; */
-    border-radius: 3px;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #d66f54;
+    color: #212c5f;
+    font-weight: 700;
     box-shadow: .25rem .25rem .4rem rgba(0, 0, 0, 0.7);
     border: 1px solid black;
-    width:20vmin;
-    font-size: 2vmin;
-    word-wrap: break-word;
-    /* justify-content: center; */
+    border-radius: 3px;
+   word-wrap: break-word;
+   flex-basis: calc(33.333%-20px);
+    width:350px;
+    height:350px;
    
 }
+
+
+
+
+
+@media screen and (max-width:768px) {
+
+    .adoptCard{
+
+        flex-basis: calc(50%-20px);
+    }
+
+    .donationCard{
+
+        flex-basis: calc(50%-20px);
+
+
+    }
+    
+}
+
+
 

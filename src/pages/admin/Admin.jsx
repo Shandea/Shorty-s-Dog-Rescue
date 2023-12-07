@@ -21,7 +21,7 @@ const Admin = () => {
 
   return (
     <div className="adminWholePage">
-      <h1>Welcome Admin!</h1>
+      <h1 className='welcomeTitle'>Welcome Admin!</h1>
 
       <div className='adoptSection'>
         <h2>Adoption Data:</h2>
