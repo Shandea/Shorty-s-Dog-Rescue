@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import "../styles/global.css";
 import "./NavBar.css";
@@ -12,6 +12,21 @@ const NavBar = ({ isAdmin, setIsAdmin, showLogIn, showLogOut, setShowLogIn, setL
 
   const [isOpen, setIsOpen] = useState(false)
 
+  useEffect(() => {
+    // Check localStorage on component mount and update isAdmin and showLogOut state
+    const storedIsAdmin = localStorage.getItem('isAdmin');
+    const storedShowLogOut = localStorage.getItem('showLogOut');
+
+    if (storedIsAdmin) {
+      setIsAdmin(true);
+    }
+
+    if (storedShowLogOut) {
+      setLogOut(true);
+      setShowLogIn(false);
+    }
+  }, [setIsAdmin, setLogOut, setShowLogIn]);
+
   const showNavbar = () => {
     navRef.current.classList.toggle("responsive_nav");
   }
@@ -24,12 +39,19 @@ const NavBar = ({ isAdmin, setIsAdmin, showLogIn, showLogOut, setShowLogIn, setL
     setShowLogIn(true)
     setLogOut(false)
     setIsOpen(true)
+
+    localStorage.setItem('isAdmin', true);
+    localStorage.setItem('showLogOut', true);
   }
 
   const handleLogOut = () => {
     setShowLogIn(true)
     setLogOut(false)
     setIsOpen(false)
+    setIsAdmin(false)
+
+    localStorage.removeItem('isAdmin');
+    localStorage.removeItem('showLogOut');
   }
 
   return (
@@ -81,8 +103,8 @@ const NavBar = ({ isAdmin, setIsAdmin, showLogIn, showLogOut, setShowLogIn, setL
       )}
     </>
 
-    
- 
+
+
   );
 }
 

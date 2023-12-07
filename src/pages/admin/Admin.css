@@ -16,7 +16,7 @@
 }
 
 .welcomeTitle{
-    color: #212c5f;
+    color: var(--textColor);
 }
 
 /* adoptSection holds "adoption data " title and adoption cards */

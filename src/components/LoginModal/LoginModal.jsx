@@ -12,13 +12,14 @@ const LoginModal = ({ isAdmin, setIsAdmin, setShowLogIn, setLogOut, setIsOpen })
         backgroundColor: '#fff3e6'
     }
 
-    const handleSubmit = () => {
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
         if (username && password === 'admin') {
             setIsAdmin(true)
-            // setLogOut(true)
-            // setShowLogIn(false)
-            // window.location.reload(false)
-            console.log(isAdmin)
+            setLogOut(true)
+            setShowLogIn(false)
+            setIsOpen(false)
         }
     }
 
@@ -27,8 +28,6 @@ const LoginModal = ({ isAdmin, setIsAdmin, setShowLogIn, setLogOut, setIsOpen })
         setShowLogIn(true)
         setIsOpen(false)
     }
-
-
 
     return (
         <div className="modal-background">
@@ -53,7 +52,7 @@ const LoginModal = ({ isAdmin, setIsAdmin, setShowLogIn, setLogOut, setIsOpen })
                         value={password}
                         onChange={(e) => setPassword(e.target.value)} className="input" type="password" placeholder="Password" name="psw" required />
 
-                    <button onClick={handleSubmit} className="login" type="submit">Login</button>
+                    <button onClick={(e) => handleSubmit(e)} className="login" type="submit">Login</button>
 
                 </div>
 
