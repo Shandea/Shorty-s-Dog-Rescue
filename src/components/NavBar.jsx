@@ -33,6 +33,7 @@ const NavBar = ({ isAdmin, setIsAdmin, showLogIn, showLogOut, setShowLogIn, setL
   }
 
   return (
+
     <>
       <header>
         <div className='header-container'>
@@ -80,6 +81,38 @@ const NavBar = ({ isAdmin, setIsAdmin, showLogIn, showLogOut, setShowLogIn, setL
         />
       )}
     </>
+
+    <header>
+      <div className='header-container'>
+        <img src={Logo} alt='Logo' />
+        <nav ref={navRef}>
+          <Link to='/' className={isLinkActive('/') ? 'active' : ''}>HOME</Link>
+          <Link to='/about' className={isLinkActive('/about') ? 'active' : ''}>ABOUT</Link>
+          <Link to='/adopt' className={isLinkActive('/adopt') ? 'active' : ''}>ADOPT</Link>
+          <Link to='/donate' className={isLinkActive('/donate') ? 'active' : ''}>DONATE</Link>
+          <button className='nav-btn nav-close-btn' onClick={showNavbar}><p className='menu-text'>Close</p>
+            <FaTimes />
+          </button>
+
+
+
+          {isAdmin && (
+            <Link to='/admin' className={isLinkActive('/admin') ? 'active' : ''}>ADMIN</Link>
+
+          )}
+          {showLogIn &&(
+          <button id="signIn" className="signin-btn" onClick={handleLogin}>LOGIN</button>
+          )}
+           {showLogOut &&(
+          <button id="signOut" className="signin-btn" onClick={handleLogOut}>LOGOUT</button>
+          )}
+        </nav>
+      </div>
+      <button className='nav-btn nav-btn-open' onClick={showNavbar}><p className='menu-text'>Menu</p>
+        <FaBars />
+      </button>
+    </header>
+ 
   );
 }
 
