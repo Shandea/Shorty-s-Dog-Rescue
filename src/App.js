@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import './styles/App.css';
 import NavBar from "./components/NavBar";
 import Home from "./pages/home/Home";
@@ -10,11 +10,10 @@ import Admin from './pages/admin/Admin';
 
 
 function App() {
-
+  
   const [showLogIn, setShowLogIn] = useState(true)
   const [showLogOut, setLogOut] = useState (false)
   const [isAdmin, setIsAdmin] = useState(false)
-
 
   return (
     <div className="App">
@@ -30,12 +29,15 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/admin" element={<Admin />} />
         <Route path="/about" element={<About />} />
         <Route path="/adopt" element={<Adopt />} />
         <Route path="/donate" element={<Donate />} />
+        {isAdmin ? (
+          <Route path="/admin" element={<Admin />} />
+        ) : (
+          <Route path="/admin" element={<Navigate to="/" />} />
+        )}
       </Routes>
-
     </div>
   );
 }
