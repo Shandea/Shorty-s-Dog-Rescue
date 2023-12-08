@@ -22,7 +22,7 @@ nav {
   width: 70%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .header-container img {
@@ -63,26 +63,26 @@ header .nav-btn:hover {
 .menu-text {
   font-size: 1.15rem;
 }
+
 .signin-btn{
  border:none;
  padding: 0;
  background: none;
  cursor: pointer;
  color: var(--textColor);
- 
  font-size: 1.15rem;
  font-weight: bold;
-
 }
+
 .signin-btn:hover{
   color: var(--secondaryColor);
 }
 
-@media only screen and (max-width: 625px) {
+@media only screen and (max-width: 750px) {
 
   header {
     padding: 0;
-    height: 9rem;
+    height: 14rem;
   }
 
   header .nav-btn {
@@ -109,8 +109,13 @@ header .nav-btn:hover {
 
   .responsive_nav {
     /* margin-bottom: 5rem; */
-    height: 9rem;
+    height: 14rem;
     transform: none;
+  }
+
+  .header-container img {
+    height: 100%;
+    width: 100%;
   }
 
   .nav-close-btn {
