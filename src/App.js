@@ -13,7 +13,7 @@ function App() {
   
   const [showLogIn, setShowLogIn] = useState(true)
   const [showLogOut, setLogOut] = useState (false)
-  const [isAdmin, setIsAdmin] = useState(false)
+  const [isAdmin, setIsAdmin] = useState(localStorage.getItem("isAdmin") === "true");
 
   return (
     <div className="App">
