@@ -1,10 +1,7 @@
 import './video.css'
 import dogvideo from '../../assets/dogvideo.mp4'
 
-
-
 const Video = () => {
-
     return (
         <div>
             <h2 className='video-title'>Connect With Your New Best Friend</h2>

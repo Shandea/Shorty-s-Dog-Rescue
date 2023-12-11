@@ -20,7 +20,7 @@ const DonationForm = () => {
     if (submitted) {
       const delay = setTimeout(() => {
         setSubmitted(false);
-      }, 50000); // Adjust the duration as needed for "Thank You" msg.
+      }, 50000); // "Thank You" msg duration
       return () => clearTimeout(delay);
     }
   }, [submitted]);
@@ -32,7 +32,7 @@ const DonationForm = () => {
     if (name === 'expirationDate') {
       // Ensure only numeric input and format as MM/YYYY
       const sanitizedValue = value.replace(/[^\d/]/g, '');
-      const maxLength = 7; // MM/YYYY has a length of 7 characters
+      const maxLength = 7;
       const truncatedValue = sanitizedValue.slice(0, maxLength);
 
       setFormData((prevData) => ({
@@ -41,7 +41,7 @@ const DonationForm = () => {
       }));
       
     } else if (name === 'creditCardNumber') {
-      // For "Credit Card Number", ensure only numeric input and limit to 16 characters
+      
       const numericValue = value.replace(/[^\d]/g, '');
       const maxLength = 16;
       const truncatedValue = numericValue.slice(0, maxLength);
@@ -51,7 +51,7 @@ const DonationForm = () => {
         [name]: truncatedValue,
       }));
     } else if (name === 'securityCode') {
-      // For "Security Code", ensure only numeric input and limit to 3 characters
+     
       const numericValue = value.replace(/[^\d]/g, '');
       const maxLength = 3;
       const truncatedValue = numericValue.slice(0, maxLength);
@@ -61,7 +61,7 @@ const DonationForm = () => {
         [name]: truncatedValue,
       }));
     } else {
-      // For other fields, update the state without restrictions
+     
       setFormData((prevData) => ({
         ...prevData,
         [name]: value,
@@ -83,10 +83,8 @@ const DonationForm = () => {
       const response = await axios.post(apiUrl + "/forms/donation", {
         formData,
       });
-
       console.log('Form submitted:', formData);
       console.log('Server Response:', response.data);
-
       resetForm();
 
     } catch (error) {
@@ -161,7 +159,7 @@ const DonationForm = () => {
             value={formData.expirationDate}
             onChange={handleInputChange}
             placeholder="MM/YYYY"
-            pattern="(0[1-9]|1[0-2])\/[0-9]{4}" // Format: MM/YYYY
+            pattern="(0[1-9]|1[0-2])\/[0-9]{4}"
             required />
         </label>
       </div>
@@ -175,7 +173,7 @@ const DonationForm = () => {
             value={formData.securityCode}
             onChange={handleInputChange}
             placeholder="CVV"
-            pattern="[0-9]{3}" // CVV typically has 3 digits
+            pattern="[0-9]{3}"
             required />
         </label>
       </div>

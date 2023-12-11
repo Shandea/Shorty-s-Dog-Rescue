@@ -79,7 +79,6 @@ header .nav-btn:hover {
 }
 
 @media only screen and (max-width: 750px) {
-
   header {
     padding: 0;
     height: 14rem;
@@ -103,12 +102,10 @@ header .nav-btn:hover {
     justify-content: center;
     gap: .25rem;
     background-color: var(--mainColor);
-    /* transition: .01s; */
     transform: translate(-100vh);
   }
 
   .responsive_nav {
-    /* margin-bottom: 5rem; */
     height: 14rem;
     transform: none;
   }

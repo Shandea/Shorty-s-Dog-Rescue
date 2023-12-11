@@ -1,5 +1,3 @@
-
-
 ### Submit Adoption Form Data
 POST http://localhost:4000/forms/adoption
 Content-Type: application/json
