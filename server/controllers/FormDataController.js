@@ -1,6 +1,6 @@
 const { Adopt, Donate } = require('../models');
 
-// Controller function for fetching adoption form data 
+// Controller functions for fetching form data 
 async function getAdoptData(req, res) {
   try {
     const adoptData = await Adopt.find();
@@ -12,7 +12,6 @@ async function getAdoptData(req, res) {
   }
 }
 
-// Controller function for fetching donation form data
 async function getDonateData(req, res) {
   try {
     const donateData = await Donate.find();
@@ -25,11 +24,10 @@ async function getDonateData(req, res) {
   }
 }
 
-// Controller function for submitting adoption form data
+// Controller functions for submitting form data
 async function submitAdoptData(req, res) {
   try {
     const formData = req.body.formData;
-
     const newAdoptData = new Adopt({
       dogName: formData.nameOfDog,
       firstName: formData.firstName,
@@ -41,20 +39,16 @@ async function submitAdoptData(req, res) {
     });
 
     await newAdoptData.save();
-
     res.status(201).json({ message: 'Adoption form data submitted successfully' });
   } catch (error) {
     console.error('Error submitting adoption form data:', error);
     res.status(500).json({ error: 'Internal server error', message: error.message });
-
   }
 }
 
-// Controller function for submitting donation form data
 async function submitDonateData(req, res) {
   try {
     const formData = req.body.formData;
-
     const newDonateData = new Donate({
       fullName: formData.fullName,
       email: formData.email,
@@ -66,7 +60,6 @@ async function submitDonateData(req, res) {
     });
 
     await newDonateData.save();
-
     res.status(201).json({ message: 'Donation form data submitted successfully' });
   } catch (error) {
     console.error('Error submitting donation form data:', error);

@@ -20,7 +20,7 @@ const AdoptionForm = () => {
     if (submitted) {
       const delay = setTimeout(() => {
         setSubmitted(false);
-      }, 50000); // Adjust the duration as needed for "Thank You" msg.
+      }, 50000); // "thank you" msg duration
       return () => clearTimeout(delay);
     }
   }, [submitted]);

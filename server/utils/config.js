@@ -2,10 +2,8 @@ if (process.env.NODE_ENV !== "production") {
     require('dotenv').config()
 }
 
-
 module.exports = {
     session: {
-      
         secret: process.env.SESSION_SECRET,
         resave: false,
         saveUninitialized: false,

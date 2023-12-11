@@ -1,6 +1,5 @@
 import React,{useState} from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import './styles/App.css';
 import NavBar from "./components/NavBar";
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
@@ -10,7 +9,6 @@ import Admin from './pages/admin/Admin';
 
 
 function App() {
-  
   const [showLogIn, setShowLogIn] = useState(true)
   const [showLogOut, setLogOut] = useState (false)
   const [isAdmin, setIsAdmin] = useState(localStorage.getItem("isAdmin") === "true");

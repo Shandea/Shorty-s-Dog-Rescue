@@ -13,7 +13,6 @@ const NavBar = ({ isAdmin, setIsAdmin, showLogIn, showLogOut, setShowLogIn, setL
   const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
-    // Check localStorage on component mount and update isAdmin and showLogOut state
     const storedIsAdmin = localStorage.getItem('isAdmin');
     const storedShowLogOut = localStorage.getItem('showLogOut');
 
@@ -39,7 +38,6 @@ const NavBar = ({ isAdmin, setIsAdmin, showLogIn, showLogOut, setShowLogIn, setL
     setShowLogIn(true)
     setLogOut(false)
     setIsOpen(true)
-
     localStorage.setItem('isAdmin', true);
     localStorage.setItem('showLogOut', true);
   }
@@ -49,7 +47,6 @@ const NavBar = ({ isAdmin, setIsAdmin, showLogIn, showLogOut, setShowLogIn, setL
     setLogOut(false)
     setIsOpen(false)
     setIsAdmin(false)
-
     localStorage.removeItem('isAdmin');
     localStorage.removeItem('showLogOut');
   }
@@ -69,11 +66,9 @@ const NavBar = ({ isAdmin, setIsAdmin, showLogIn, showLogOut, setShowLogIn, setL
               <FaTimes />
             </button>
 
-
             {isAdmin && (
               <Link to='/admin' className={isLinkActive('/admin') ? 'active' : ''}>ADMIN</Link>
             )}
-
 
             {showLogIn && (
               <button id="signIn" className="signin-btn" onClick={handleLogin}>LOGIN</button>
@@ -82,14 +77,13 @@ const NavBar = ({ isAdmin, setIsAdmin, showLogIn, showLogOut, setShowLogIn, setL
             {showLogOut && (
               <button id="signOut" className="signin-btn" onClick={handleLogOut}>LOGOUT</button>
             )}
-
           </nav>
         </div>
         <button className='nav-btn nav-btn-open' onClick={showNavbar}><p className='menu-text'>Menu</p>
           <FaBars />
         </button>
       </header>
-
+      
       {isOpen && (
         <LoginModal
           isAdmin={isAdmin}

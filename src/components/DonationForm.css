@@ -1,4 +1,3 @@
-/* Mobile-first styles */
 .donation-form {
   margin-bottom: 1rem;
   max-width: 85%;
@@ -53,7 +52,6 @@ select {
   flex-direction: row;
 }
 
-/* Responsive styles */
 @media only screen and (min-width: 600px) and (max-width: 950px) {
   .donation-form {
     margin-top: 1rem;
