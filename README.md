@@ -16,30 +16,38 @@ To run Shorty's Rescue locally, follow these steps:
 1. Clone the repository:
    git clone https://github.com/okrayum/Shorty-s-Rescue.git
 
-2. Install dependencies for the server:
-   cd server
-   npm install
-
-3. Go back to the root directory:
-   cd ..
-
-4. Install dependencies for the client:
+2. Install dependencies for the client:
+   
    cd client
+   
    npm install
 
-5. From the client folder start the frontend and backend simultaneously using Concurrent:
-   npm run start:dev
+3. From the client folder start the frontend:
+   
+   npm run start
 
-Keep in mind that certain features may not work locally without connecting to the cloud database.
+This will only provide access to the frontend of the project.
 
-Admin Access
-
-To access admin features, use the following credentials:
-
-  Username: admin   Password: admin
-  
-Keep in mind that admin features may not work locally without connecting to the cloud database.
-
-Full Functionality
+Full Functionality:
 
 For access to the full functionality, including cloud database connections and environment variables, please inquire to GitHub user okrayum.
+
+If you have obtained the required information to see the full project, you may follow the additional steps listed below.
+
+4. Go back to the root directory:
+   
+   cd ..
+
+5. Install dependencies for the server:
+   
+   cd server
+   
+   npm install
+   
+6. Return to the client folder start the frontend and backend simultaneously using Concurrent:
+    
+   cd ..
+   
+   cd client
+   
+   npm run start:dev
